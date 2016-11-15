@@ -39,7 +39,7 @@ local function check_member_super(cb_extra, success, result)
       end
       data[tostring(groups)][tostring(msg.to.id)] = msg.to.id
       save_data(_config.moderation.data, data)
-	  local text = 'SuperGroup has been added!'
+	  local text = '<b>Alright!</b>\n\n<i>I will Add This Group To The Data Base</i>'
       return reply_msg(msg.id, text, ok_cb, false)
     end
   end
@@ -63,7 +63,7 @@ local function check_member_superrem(cb_extra, success, result)
       end
       data[tostring(groups)][tostring(msg.to.id)] = nil
       save_data(_config.moderation.data, data)
-	  local text = 'SuperGroup has been removed'
+	  local text = '<b>Done!</b>\n\n<i>Supergroup Has Been Removed From DataBase</i>'
       return reply_msg(msg.id, text, ok_cb, false)
     end
   end
@@ -978,7 +978,7 @@ function show_supergroup_settingsmod(msg, target)
   	mute_fwd = 'no'
   end
   local settings = data[tostring(target)]['settings']
-  local text = "____________________\n⚙SuperGroup settings⚙:⬇️\n____________________\n>Lock links : "..settings.lock_link.."\n>Lock contacts: "..settings.lock_contacts.."\n>Lock flood: "..settings.flood.."\n>Flood sensitivity : "..NUM_MSG_MAX.."\n>Lock spam: "..settings.lock_spam.."\n>Lock Arabic: "..settings.lock_arabic.."\n>Lock Member: "..settings.lock_member.."\n>Lock RTL: "..settings.lock_rtl.."\n>Lock Tgservice: "..settings.lock_tgservice.."\n>Lock sticker: "..settings.lock_sticker.."\n>Lock tag(#): "..settings.tag.."\n>Lock emoji: "..settings.emoji.."\n>Lock english: "..settings.english.."\n>Lock fwd(forward): "..mute_fwd.."\n>Lock reply: "..mute_reply.."\n>Lock join: "..settings.join.."\n>Lock username(@): "..settings.username.."\n>Lock media: "..settings.media.."\n>Lock fosh: "..settings.fosh.."\n>Lock leave: "..settings.leave.."\n>Lock bots: "..bots_protection.."\n>Lock operator: "..settings.operator.."\n____________________\n⚙Easy Sweet&Faster Switch⚙:⬇️\n____________________\n>Switch Model Etehad: "..settings.etehad.."\n>Lock all: "..settings.all.."\n____________________\nℹ️About Groupℹ️:⬇️\n____________________\n>group type: "..gp_type.."\n>Public: "..settings.public.."\n>Strict settings: "..settings.strict.."\n____________________\n>>bot version : v2.9<<\n>>>👑MeGa shield👑<<<\n>>@shieldTM<<"
+  local text = "<i>SuperGroup settings</i>:\n____________________\n<b>Ads Settings</b>\n_________________________________\n<i>Lock links</i> : "..settings.lock_link.."\n<i>Lock contacts</i>: "..settings.lock_contacts.."\n<i>Lock tag(#)</i>: "..settings.tag.."\n<i>Lock fwd(forward)</i>: "..mute_fwd.."\n\n\n<b>Other Settings:</b>\n______________________________\n<i>Lock flood</i>: "..settings.flood.."\n<i>Flood sensitivity</i> : "..NUM_MSG_MAX.."\n<i>Lock spam</i>: "..settings.lock_spam.."\n<i>Lock Arabic</i>: "..settings.lock_arabic.."\n<i>Lock Member</i>: "..settings.lock_member.."\n<i>Lock RTL</i>: "..settings.lock_rtl.."\n<i>Lock Tgservice</i>: "..settings.lock_tgservice.."\n<i>Lock sticker</i>: "..settings.lock_sticker.."\n<i>Lock emoji</i>: "..settings.emoji.."\n<i>Lock english</i>: "..settings.english.."\n<i>Lock reply</i>: "..mute_reply.."\n<i>Lock join</i>: "..settings.join.."\n<i>Lock username(@)</i>: "..settings.username.."\n<i>Lock media</i>: "..settings.media.."\n<i>Lock fosh</i>: "..settings.fosh.."\n<i>Lock leave</i>: "..settings.leave.."\n<i>Lock bots</i>: "..bots_protection.."\n<i>Lock operator</i>: "..settings.operator.."\n____________________\n<b>Easy Sweet&Faster Switch</b>:\n____________________\n<i>Switch Model Etehad</i>: "..settings.etehad.."\n<i>Lock all</i>: "..settings.all.."\n____________________\nAbout Group:\n____________________\n>group type: "..gp_type.."\n>Public: "..settings.public.."\n>Strict settings: "..settings.strict.."\n____________________\n>>bot version : v2.9<<\n>>><b>M A X I M U S +<<<\n>>@pedaret<<"
   return text
 end
 
